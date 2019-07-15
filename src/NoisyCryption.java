@@ -69,8 +69,6 @@
  * Upon encrypting, this program will give the client a String which contains all 4 keys.
  * This String can be used to decrypt the encrypted message. The keys are randomly generated
  * and are unique to each file.
- * 
- * 
  */
 public class NoisyCryption {
 

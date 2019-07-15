@@ -68,3 +68,14 @@ These encryption methods work as follows:
 Upon encrypting, this program will give the client a String which contains all 4 keys.
 This String can be used to decrypt the encrypted message. The keys are randomly generated
 and are unique to each file.
+
+Purpose:
+
+Being a learning software developer / philosopher, and I am developing this open-source
+project as a way for the general public to protect confidential information from malicious
+parties. I hope that the techniques in this encryption / decryption program can be
+implemented with people seen as ends rather than means, as they are in Kantian philosophy.
+
+I believe that the respect of an individuals privacy is a categorical imperative, so long as
+what the individual holds private does not compromise the well being of other individuals.
+I hope that this is kept in mind to the users of this software.
