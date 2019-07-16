@@ -1,8 +1,10 @@
+import java.util.Scanner;
+
 /**
  * @author Fronrich Puno
  * 
- * Start Date: July 15, 2019
- * 
+ * @since July 15, 2019
+ * @version 0.0.0
  * DESCRIPTION:
  * 
  * This is the first prototype of an encryption / decryption algorithm which
@@ -71,13 +73,49 @@
  * and are unique to each file.
  */
 public class NoisyCryption {
-
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	
+	public static void main (String[] args) {
+		
+		// Program Name
+		final String PROGRAM_NAME = "NKRPT";
+		// Version Number {<Major Release>, <Minor Update>, <Bug Fix>}
+		final int[] VERSION_NUMBER = {0, 0, 0};
+		// Program header
+		System.out.println (PROGRAM_NAME + " - Version " + 
+				"\"" +VERSION_NUMBER[0] + "." + 
+				VERSION_NUMBER[1] + "." + 
+				VERSION_NUMBER[2] + "\"");
+		System.out.println ("Created by Fronrich Puno\n");
+		engine();
+	}
+	
+	private static void engine() {
+		Scanner keyboard = new Scanner(System.in);
+		// Program will run as long as client desires
+		boolean run = true;
+		while (run) {
+			// regardless of object construction file prompt will appear
+			boolean validInput = false;
+			while (!validInput) {
+				String[] function = getInfo(keyboard);
+				Cryptor cryptor = function[0] == "0" ? new Encryptor(function[1]) : new Decryptor(function[1]);
+			}
+			
+		}
+		keyboard.close();
+	}
+	// Asks for file, then lists options for client
+	// 0 is encrypt, 1 is decrypt
+	// anything else results in 
+	private static String[] getInfo (Scanner keyboard) {
+		String[] function = new String[2];
+		System.out.print(false);
+		return function;
+	}
+	
+	// Ask client wether to continue or not
+	private static boolean cont (Scanner keyboard) {
+		
 	}
 
 }
