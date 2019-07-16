@@ -12,7 +12,12 @@ import java.util.Scanner;
 public class NoisyCryption {
 
 	public static void main(String[] args) {
+		header();
+		engine();
+	}
 
+	// Descriptive information about the program
+	private static void header() {
 		// Program Name
 		final String PROGRAM_NAME = "NKRPT";
 		// Version Number {<Major Release>, <Minor Update>, <Bug Fix>}
@@ -21,9 +26,9 @@ public class NoisyCryption {
 		System.out.println(PROGRAM_NAME + " - Version " + "\"" + VERSION_NUMBER[0] + "." + VERSION_NUMBER[1] + "."
 				+ VERSION_NUMBER[2] + "\"");
 		System.out.println("Created by Fronrich Puno\n");
-		engine();
 	}
 
+	// primary engine
 	private static void engine() {
 		Scanner keyboard = new Scanner(System.in);
 		// Program will run as long as client desires
@@ -41,17 +46,33 @@ public class NoisyCryption {
 	// anything else results in
 	private static PreProcessor getInfo(Scanner keyboard) {
 		// first get valid function
-
+		// input as String to prevent runtime errors
+		String functionAsString = "";
+		boolean validFunction = false;
+		while (!validFunction) {
+			System.out.println("Please input a valid function\n" + "- 0 is the ENCRYPT function\n"
+					+ "- 1 is the DECRYPT function");
+			System.out.print("Enter your choice here: ");
+			functionAsString = keyboard.next();
+			System.out.println();
+			if (functionAsString.equals("0") || functionAsString.equals("1"))
+				validFunction = true;
+			else {
+				System.out.println("\"" + functionAsString + "\" is not a valid option.\n");
+				validFunction = false;
+			}
+		}
+		int function = Integer.parseInt(functionAsString);
+		assert function == 0 || function == 1;
 		// get valid file to apply function to
-
+		String fileName = "";
 		// if all valid return the PreProcessor
-		String[] function = new String[2];
-		System.out.print(false);
 		// FIXME
-		return new PreProcessor(0, null);
+		System.out.println("You picked to " + (function == 0 ? "ENCRYPT" : "DECRYPT") + " the file \"" + fileName + "\"");
+		return new PreProcessor(function, fileName);
 	}
 
-	// Ask client wether to continue or not
+	// Ask client whether to continue or not
 	private static boolean cont(Scanner keyboard) {
 
 	}
