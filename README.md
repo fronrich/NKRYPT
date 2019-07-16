@@ -2,7 +2,7 @@
 
 Start Date: July 15, 2019
 
-<h2>DESCRIPTION:
+<h2>DESCRIPTION:</h2>
 
 This is the first prototype of an encryption / decryption algorithm which
 utilizes periodic noisy bit expansion and salting.
@@ -22,7 +22,7 @@ These encryption methods work as follows:
 	are arbitrary.
 	
 
-	* <h3>Here Is An Example:
+	* <h3>Here Is An Example:</h3>
 
 		KEY_X (base 10) | Original bit(s) | Possible Expaned bit(s)
 		----------------|-----------------|-
@@ -45,7 +45,7 @@ These encryption methods work as follows:
 	int for **KEY_A** was "3" (in base 10), every 3 bits in the original file, there would
 	be a salt.
 	
-	* <h3>Here Is An Example:
+	* <h3>Here Is An Example:</h3>
 	
 		POSITION: | 1 | 2 | 3 |  | 4 | 5 | 6 |   | 7 | 8 |
 		--------- | - | - | - | - | - | - | - | - | - | - |
@@ -54,7 +54,7 @@ These encryption methods work as follows:
 	* **KEY_B** is an int which will determine the length in characters of each salt.
 	The characters in the salt are completely random.
 
-	* <h3>Here Is An Example:
+	* <h3>Here Is An Example:</h3>
 		
 		KEY_B (base 10)	| Possible Salt (as 8-bit characters)
 		----------------|-
@@ -76,7 +76,7 @@ Upon encrypting, this program will give the client a String which contains all 4
 This String can be used to decrypt the encrypted message. The keys are randomly generated
 and are unique to each file.
 
-<h2>Purpose:
+<h2>Purpose:</h2>
 
 Being a learning software developer / philosopher, and I am developing this open-source
 project as a way for the general public to protect confidential information from malicious
