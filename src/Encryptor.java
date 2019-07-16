@@ -1,5 +1,7 @@
-public class Encryptor implements Cryptor{
-	public Encryptor (String fileName) {
+public class Encryptor implements Cryptor {
 
+	public Encryptor(String FileName) {
+		
 	}
+	
 }
