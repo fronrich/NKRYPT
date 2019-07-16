@@ -13,7 +13,7 @@ These encryption methods work as follows:
 
 	* This program uses noisy bit expansion, which turns one bit into a
 	seemingly random string of bits. The length of this bit string is determined
-	by a 256-bit key (KEY_X). Each "1" within KEY_X is summed up. The
+	by a 256-bit key (**KEY_X**). Each "1" within **KEY_X** is summed up. The
 	sum is the length of each expanded bit.
 
 	The bits within the expanded bit, although they appear random, are determined
@@ -37,12 +37,12 @@ These encryption methods work as follows:
 
 	* This program uses periodic salting, which adds random strings
 	in between the encrypted data at set intervals. The nature of these
-	Strings is determined by three 32-bit keys (KEY_A and KEY_B). Correctly
+	Strings is determined by three 32-bit keys (**KEY_A** and **KEY_B**). Correctly
 	entering these keys will allow a client to successfully decrypt a file.
 
-	* The first key (KEY_A) is an int which will determine the periodic positioning
+	* The first key (**KEY_A**) is an int which will determine the periodic positioning
 	of salts in relation to the bits of an unencrypted file. For example, if the
-	int for KEY_A was "3" (in base 10), every 3 bits in the original file, there would
+	int for **KEY_A** was "3" (in base 10), every 3 bits in the original file, there would
 	be a salt.
 	
 	* <h3>Here Is An Example:
@@ -51,7 +51,7 @@ These encryption methods work as follows:
 		--------- | - | - | - | - | - | - | - | - | - | - |
 		ORIGINAL BIT: | 1 | 1 | 0 | SALT | 0 | 1 | 1 | SALT | 0 | 1 |
 
-	* KEY_B is an int which will determine the length in characters of each salt.
+	* **KEY_B** is an int which will determine the length in characters of each salt.
 	The characters in the salt are completely random.
 
 	* <h3>Here Is An Example:
@@ -65,7 +65,7 @@ These encryption methods work as follows:
 		20 | iIoOKNBu( B&^ Yn,:{]
 
 	* The strings themselves are also encrypted with noisy bit expansion.
-	Their factor of expansion is dependent upon the value of KEY_C.
+	Their factor of expansion is dependent upon the value of **KEY_C**.
 	By having a separate bit expansion factor for the salts,when an encrypted file
 	is attempted to be read in an encoding scheme of consistent bit length,
 	even though the bit length of that encoding scheme may match the bit length of the
